@@ -11,8 +11,8 @@ TRUST YOURSELF 🚀✨
 - Spring Cloud
 - Servidor Eureka Netflix
 - Eureka Client
-- RestTemplate
-- Feign
+- RestTemplate (sync)
+- Feign (sync)
 - Ribbon
 - Hystrix
 - Gateway Zuul

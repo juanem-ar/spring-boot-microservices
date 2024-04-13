@@ -3,6 +3,7 @@ package com.juanem.springboot.app.item.springbootitem.controller;
 import com.juanem.springboot.app.item.springbootitem.models.dto.Item;
 import com.juanem.springboot.app.item.springbootitem.service.IItemService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
