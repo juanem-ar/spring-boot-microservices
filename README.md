@@ -14,7 +14,7 @@ TRUST YOURSELF 🚀✨
 - LoadBalancer
 - RestTemplate (sync)
 - Feign (sync)
-- Hystrix
+- 
 - Gateway Zuul
 - Spring Cloud Server Config
 - Spring Security OAuth2
