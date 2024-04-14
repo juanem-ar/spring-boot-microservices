@@ -23,6 +23,9 @@ public class ProductEntity implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date creationDate;
 
+    @Transient
+    private String port;
+
     @Serial
     private static final long serialVersionUID = 128L;
 }

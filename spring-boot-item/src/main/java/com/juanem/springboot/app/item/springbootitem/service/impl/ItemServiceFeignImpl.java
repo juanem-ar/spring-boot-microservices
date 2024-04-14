@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@Primary
 public class ItemServiceFeignImpl implements IItemService {
 
     private final ProductClientRest clientFeign;
