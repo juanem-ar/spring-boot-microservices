@@ -4,10 +4,7 @@ import com.juanem.springboot.app.item.springbootitem.models.dto.Item;
 import com.juanem.springboot.app.item.springbootitem.service.IItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +15,8 @@ public class ItemController {
     private final IItemService iItemService;
 
     @GetMapping("/listar")
-    public List<Item> getAllItems(){
+    public List<Item> getAllItems(@RequestParam(name="nameParam") String name, @RequestHeader(name = "token-request") String token){
+        System.out.println("NOMBRE: " + name + ", TOKEN: " + token);
         return iItemService.getAll();
     }
     @GetMapping("/{id}/{quantity}")

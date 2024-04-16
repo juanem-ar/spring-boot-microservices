@@ -4,6 +4,8 @@ import com.juanem.springboot.app.item.springbootitem.models.dto.Item;
 import com.juanem.springboot.app.item.springbootitem.models.dto.Product;
 import com.juanem.springboot.app.item.springbootitem.service.IItemService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,6 +15,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 @Primary
 public class ItemServiceImpl implements IItemService {
     private final RestTemplate restClient;

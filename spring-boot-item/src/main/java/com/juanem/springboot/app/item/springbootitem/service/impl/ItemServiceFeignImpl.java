@@ -4,7 +4,6 @@ import com.juanem.springboot.app.item.springbootitem.clients.ProductClientRest;
 import com.juanem.springboot.app.item.springbootitem.models.dto.Item;
 import com.juanem.springboot.app.item.springbootitem.service.IItemService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
