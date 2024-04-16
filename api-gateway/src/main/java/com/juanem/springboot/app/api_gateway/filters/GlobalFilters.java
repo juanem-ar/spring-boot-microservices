@@ -29,12 +29,12 @@ public class GlobalFilters implements GlobalFilter, Ordered {
                 exchange.getResponse().getHeaders().add("token", valor);
             });
             exchange.getResponse().getCookies().add("color", ResponseCookie.from("color", "rojo").build());
-            exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);
+            //exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);
         }));
     }
 
     @Override
     public int getOrder() {
-        return -1;
+        return 1;
     }
 }
