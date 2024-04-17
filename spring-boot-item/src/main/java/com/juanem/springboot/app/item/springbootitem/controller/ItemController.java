@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@RefreshScope //Actualizar los componentes con los cambios en tiempo real y sin necesidad de reiniciar la aplicaicon
 @RestController
 @RequestMapping("/api/items")
 @RequiredArgsConstructor
@@ -22,6 +25,7 @@ import java.util.Map;
 public class ItemController {
     private final IItemService iItemService;
     private final CircuitBreakerFactory circuitBreakerFactory;
+    private final Environment env;
     @Value("${configuration.text}")
     private String texto;
 
@@ -31,6 +35,10 @@ public class ItemController {
         Map<String, String> json = new HashMap<>();
         json.put("texto", texto);
         json.put("port", port);
+        if(env.getActiveProfiles().length>0 && env.getActiveProfiles()[0].equals("dev")){
+            json.put("nombre", env.getProperty("configuration.autor.nombre"));
+            json.put("email", env.getProperty("configuration.autor.email"));
+        }
         return ResponseEntity.status(HttpStatus.OK).body(json);
     }
     @CircuitBreaker(name = "service-items", fallbackMethod = "getItemsFallback")

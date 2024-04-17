@@ -31,7 +31,11 @@ TRUST YOURSELF 🚀✨
 
 # config server
 
-http://localhost:8888/api-gateway/default
-http://localhost:8888/service-items/default
-http://localhost:8888/service-products/default
-http://localhost:8888/discovery-server/default
+GET - http://localhost:8888/service-items/default / dev / prod
+
+# Actualizar valores de configuracion
+
+POST - http://localhost:{PUERTO A ACTUALIZAR}/actuator/refresh
+GET - http://localhost:8080/api/items/get-config para validar los cambios
+
+# 
