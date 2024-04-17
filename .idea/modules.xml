@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-item/src/main/main.iml" filepath="$PROJECT_DIR$/spring-boot-item/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-productos/src/main/main1.iml" filepath="$PROJECT_DIR$/spring-boot-productos/src/main/main1.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-discovery-server/src/main/main3.iml" filepath="$PROJECT_DIR$/spring-boot-discovery-server/src/main/main3.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-gateway/src/main/main4.iml" filepath="$PROJECT_DIR$/api-gateway/src/main/main4.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-boot-microservices.iml" filepath="$PROJECT_DIR$/.idea/spring-boot-microservices.iml" />

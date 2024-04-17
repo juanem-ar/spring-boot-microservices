@@ -26,3 +26,12 @@ TRUST YOURSELF 🚀✨
 # Architecture
 
 ![img.png](assets/img.png)
+
+# Postman
+
+# config server
+
+http://localhost:8888/api-gateway/default
+http://localhost:8888/service-items/default
+http://localhost:8888/service-products/default
+http://localhost:8888/discovery-server/default

@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/spring-boot-item/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-productos/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/config/pom.xml" />
       </list>
     </option>
   </component>
